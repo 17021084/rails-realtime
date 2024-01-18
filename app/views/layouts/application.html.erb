@@ -12,5 +12,11 @@
 
   <body>
     <%= yield %>
+     <form id="new_notification" onsubmit="sendNotification(); return false;">
+      <label for="message">Notification Message:</label>
+      <input type="text" id="message" name="message" required>
+      <button type="submit">Send Notification</button>
+    </form>
+    <%= javascript_include_tag 'application' %>
   </body>
 </html>
